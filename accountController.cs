@@ -59,15 +59,15 @@ namespace alharamApp.Controllers
             {
                 if (userInfo.roleID == null)
                 {
-                    //its fro my security purpose only 
+                    //its for my security purpose only 
                     userInfo.roleID = 1;
 
-                    dbAccess.allUsers.Add(userInfo);
+                    dbAccess.allUsers.Add(allUser userInfo);
 
                     //without save changes the previous insert query will not applied 
                     dbAccess.SaveChanges();
 
-                   // sendEmail(userInfo);
+                    sendEmail(userInfo);
                 }
 
                 return RedirectToAction("loginForm");
