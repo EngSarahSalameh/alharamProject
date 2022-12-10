@@ -1,0 +1,586 @@
+﻿@using alharamApp.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+@{
+    alharamDBGates dbAccessGates = new alharamDBGates();
+    List<alharamGate> gatesInfo = dbAccessGates.alharamGates.ToList();
+
+}
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger0').hover(function (e) {
+            $('div#pop-up0').show();
+            //.css('top', e.pageY + moveDown)
+            //.css('left', e.pageX + moveLeft)
+            //.appendTo('body');
+        }, function () {
+            $('div#pop-up0').hide();
+        });
+
+        $('a.trigger0').mousemove(function (e) {
+            $("div#pop-up0").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger1').hover(function (e) {
+            $('div#pop-up1').show();
+            //.css('top', e.pageY + moveDown)
+            //.css('left', e.pageX + moveLeft)
+            //.appendTo('body');
+        }, function () {
+            $('div#pop-up1').hide();
+        });
+
+        $('a.trigger1').mousemove(function (e) {
+            $("div#pop-up1").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger2').hover(function (e) {
+            $('div#pop-up2').show();
+        }, function () {
+            $('div#pop-up2').hide();
+        });
+
+        $('a.trigger2').mousemove(function (e) {
+            $("div#pop-up2").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger3').hover(function (e) {
+            $('div#pop-up3').show();
+        }, function () {
+            $('div#pop-up3').hide();
+        });
+
+        $('a.trigger3').mousemove(function (e) {
+            $("div#pop-up3").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger4').hover(function (e) {
+            $('div#pop-up4').show();
+        }, function () {
+            $('div#pop-up4').hide();
+        });
+
+        $('a.trigger4').mousemove(function (e) {
+            $("div#pop-up4").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger5').hover(function (e) {
+            $('div#pop-up5').show();
+        }, function () {
+            $('div#pop-up5').hide();
+        });
+
+        $('a.trigger5').mousemove(function (e) {
+            $("div#pop-up5").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger6').hover(function (e) {
+            $('div#pop-up6').show();
+        }, function () {
+            $('div#pop-up6').hide();
+        });
+
+        $('a.trigger6').mousemove(function (e) {
+            $("div#pop-up6").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger7').hover(function (e) {
+            $('div#pop-up7').show();
+        }, function () {
+            $('div#pop-up7').hide();
+        });
+
+        $('a.trigger7').mousemove(function (e) {
+            $("div#pop-up7").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger8').hover(function (e) {
+            $('div#pop-up8').show();
+        }, function () {
+            $('div#pop-up8').hide();
+        });
+
+        $('a.trigger8').mousemove(function (e) {
+            $("div#pop-up8").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger9').hover(function (e) {
+            $('div#pop-up9').show();
+        }, function () {
+            $('div#pop-up9').hide();
+        });
+
+        $('a.trigger9').mousemove(function (e) {
+            $("div#pop-up9").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger10').hover(function (e) {
+            $('div#pop-up10').show();
+        }, function () {
+            $('div#pop-up10').hide();
+        });
+
+        $('a.trigger10').mousemove(function (e) {
+            $("div#pop-up10").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+
+    $(function () {
+        var moveLeft = 30;
+        var moveUp = -100;
+
+        $('a.trigger11').hover(function (e) {
+            $('div#pop-up11').show();
+        }, function () {
+            $('div#pop-up11').hide();
+        });
+
+        $('a.trigger10').mousemove(function (e) {
+            $("div#pop-up11").css('top', e.pageY + moveUp).css('left', e.pageX + moveLeft);
+        });
+
+    });
+</script>
+
+<style>
+    div#pop-up0, div#pop-up1, div#pop-up2, div#pop-up3, div#pop-up4, div#pop-up5, div#pop-up6, div#pop-up7, div#pop-up8, div#pop-up9, div#pop-up10, div#pop-up11 {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        left: 75px;
+    }
+</style>
+
+<title>Your Guide to  Alharam | Home</title>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Welcome,<br>Your Guide to  Alharam </h1>
+        <h2>We are pleased to serve visitors of Holy Mosque</h2>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+    <!-- ======= About Section ======= -->
+
+
+
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2 rounded" data-aos="fade-left" data-aos-delay="100">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2368.99875353302!2d39.82728720584982!3d21.42265914781022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b74d3fb493%3A0x55d1f94f8e094785!2z2KfZhNmF2LPYrNivINin2YTYrdix2KfZhQ!5e1!3m2!1sar!2ssa!4v1660253790658!5m2!1sar!2ssa" width="640" height="480" style="border:solid; border-color:#e1a333; border-width:2px;"></iframe>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+
+                    <h3>Gates of Holy Mosque</h3>
+
+                    <p class="fst-italic">
+                        This section enlists some gates of Holy Mosque. The total number of gates is about <b>262</b>, <b>13</b> of these gates are designated or reserved for the people with disabilities and special needs. <b>Five major gates</b> lead entry into the modern Sacred Mosque, along these five major gates there are several other minor gates as well.
+                    </p>
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger0" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[0].gateName</a>
+                    </div>
+
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger1" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[1].gateName</a>
+                    </div>
+
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger2" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[2].gateName</a>
+                    </div>
+
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger3" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[3].gateName</a>
+                    </div>
+
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger4" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[4].gateName</a>
+                    </div>
+
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger5" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[5].gateName</a>
+                    </div>
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger6" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[6].gateName</a>
+                    </div>
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger7" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[7].gateName</a>
+                    </div>
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger8" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[8].gateName</a>
+                    </div>
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger9" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[9].gateName</a>
+                    </div>
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger10" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[10].gateName</a>
+                    </div>
+
+                    <div class="fst-italic">
+                        <a href="#" class="trigger11" style="color:#e1a333" onMouseOver="this.style.color='#f44336'"
+                           onMouseOut="this.style.color='#e1a333'"><i class="bi bi-door-open" style="color:#3d4841"> </i>@gatesInfo[11].gateName</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+
+
+               <iframe width="640" height="315" style="border:solid; border-color:#e1a333; border-width:2px;" src="https://www.youtube-nocookie.com/embed/k_clFvRu0cs?controls=0&amp;start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+                
+                      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                          <h3>
+                              A virtual tour inside Alharam
+                              <img src="~/imgProject/360.png" width="50" height="50" />
+                          </h3>
+
+                          <p class="fst-italic">
+                              <b>WAHI</b> project gives you the opportunity to take a virtual tour inside the boundaries of Alharam as if you were in the Holy Land.
+                          </p>
+
+                      </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <div class="m-4" id="pop-up0">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[0].gateImage" class="card-img-top h-100">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[0].gateName (Gate no.@gatesInfo[0].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[0].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up1">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[1].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[1].gateName (Gate no.@gatesInfo[1].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[1].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up2">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[2].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[2].gateName (Gate no.@gatesInfo[2].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[2].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up3">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[3].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[3].gateName (Gate no.@gatesInfo[3].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[3].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up4">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[4].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[4].gateName (Gate no.@gatesInfo[4].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[4].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up5">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[5].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[5].gateName (Gate no.@gatesInfo[5].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[5].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up6">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[6].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[6].gateName (Gate no.@gatesInfo[6].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[6].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up7">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[7].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[7].gateName (Gate no.@gatesInfo[7].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[7].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up8">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[8].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[8].gateName (Gate no.@gatesInfo[8].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[8].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up9">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[9].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[9].gateName (Gate no.@gatesInfo[9].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[9].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up10">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[10].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[10].gateName (Gate no.@gatesInfo[10].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[10].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4" id="pop-up11">
+        <div class="card" style="max-width: 500px;">
+            <div class="row g-0">
+                <div class="col-sm-5" style="background: #868e96;">
+                    <img src="~/@gatesInfo[11].gateImage" class="card-img-top h-100" width="200" height="200">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <span style="color:dimgrey"><b>@gatesInfo[11].gateName (Gate no.@gatesInfo[11].gateNumber)</b></span>
+                        <br /><br />
+                        <p style="text-align:justify">
+                            @gatesInfo[11].gateDescription
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

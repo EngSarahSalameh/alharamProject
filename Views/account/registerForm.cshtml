@@ -1,0 +1,80 @@
+﻿@model alharamApp.Models.allUser
+
+@{
+    ViewBag.Title = "registerForm";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+
+<title>Your Guide to  Alharam | Register</title>
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+
+    <div class="container">
+
+
+        <section class="h-100 h-custom" style="background-color:white">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="card rounded-3">
+                            <img src="~/imgProject/11.JPEG" class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                                 alt="Sample photo">
+                            <div class="card-body p-4 p-md-5">
+
+                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2" style="color:brown">Register</h3>
+
+
+                                @using (Html.BeginForm("registerProcess", "account"))
+                                {
+                                    @Html.AntiForgeryToken()
+
+
+
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                                    @Html.EditorFor(model => model.firstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "First name" } })
+                                    @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
+
+                                    <br />
+
+                                    @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last name" } })
+                                    @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+
+                                    <br />
+
+                                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email" } })
+                                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+
+                                    <br />
+
+                                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Password" } })
+                                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+
+                                    <br />
+                                    <input type="submit" value="Submit" class="btn btn-success" />
+
+                                }
+
+                                <br />
+
+                                <p>Already member? <a href="@Url.Action("loginForm", "account")" class="link-info">Login</a></p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

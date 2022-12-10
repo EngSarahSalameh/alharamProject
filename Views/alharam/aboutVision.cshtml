@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "aboutVision";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+<title>Your Guide to  Alharam | About Vision</title>
+
+<style>
+
+    .breadcrumbs {
+        color: white;
+        background-color: #e9b55d
+    }
+
+    .events .card {
+        border: 0;
+        padding: 0 30px;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    .events .card-img {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+        overflow: hidden;
+        z-index: 9;
+        border-radius: 0;
+    }
+
+        .events .card-img img {
+            max-width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+    .events .card-body {
+        z-index: 10;
+        background: #fff;
+        border-top: 4px solid #fff;
+        padding: 30px;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        margin-top: -60px;
+        transition: 0.3s;
+    }
+
+    .events .card-title {
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .events .card-title a {
+            color: #37423b;
+            transition: 0.3s;
+        }
+
+    .events .card-text {
+        color: #5e5e5e;
+    }
+
+    .events .read-more a {
+        color: #777777;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        transition: 0.3s;
+    }
+
+        .events .read-more a:hover {
+            color: #e1a333;
+        }
+
+    .events .card:hover img {
+        transform: scale(1.1);
+    }
+
+    .events .card:hover .card-body {
+        border-color: #e1a333;
+    }
+
+        .events .card:hover .card-body .card-title a {
+            color: #e1a333;
+        }
+
+</style>
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>About the vision</h2>
+            <p>Good friendliness to the intended. </p>
+        </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+
+                    <div class="card" >
+                        <div class="card-img">
+                            <img src="~/imgProject/5.jpg" alt="..." />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="" >The message</a></h5>
+                            <p class="fst-italic text-center"></p>
+                            <p class="card-text">Good service to those visitors of Holy Mosque, to achieve the methodology of one-body and sensing the greatness of the Muslims’ Qibla and the desires of their hearts</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="~/imgProject/4.JPG" alt="...">
+
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Objectives</a></h5>
+                            <p class="fst-italic text-center"></p>
+                            <p class="card-text">It is to save time and effort for those who want to search for a specific place in the central area of the Great Mosque of Mecca, so that a list of restaurants and hotels and barbershops has been collected, and we also offer a mini map of the courtyards of the Haram</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Events Section -->
+
+</main><!-- End #main -->

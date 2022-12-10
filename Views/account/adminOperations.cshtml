@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+<title>Your Guide to  Alharam | Admin Page</title>
+<style>
+
+    .features {
+        padding-top: 0px;
+    }
+
+        .features .icon-box {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            transition: 0.3s;
+            border: 1px solid #eef0ef;
+        }
+
+            .features .icon-box i {
+                font-size: 32px;
+                padding-right: 10px;
+                line-height: 1;
+            }
+
+            .features .icon-box h3 {
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+                font-size: 16px;
+            }
+
+                .features .icon-box h3 a {
+                    color: #37423b;
+                    transition: 0.3s;
+                }
+
+            .features .icon-box:hover {
+                border-color: #e1a333;
+            }
+
+                .features .icon-box:hover h3 a {
+                    color: #e1a333;
+                }
+</style>
+<main id="main">
+    <div class="breadcrumbs" style="background-color:white">
+        <div class="container">
+
+            <!-- ======= choice Section ======= -->
+            <section id="features" class="features">
+                <div class="container" data-aos="fade-up">
+
+                    <br />
+                    <h3 style="color : gray">Which service you want to manage ?</h3><br />
+
+                    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+
+                        <div class="col-lg-4 col-md-4">
+                            <div class="icon-box">
+                                <i class="bi bi-building" style="color:darkslateblue;"></i>
+                                <h3><a href="@Url.Action("OnlySecritOperation010", "account")">Hotels</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                            <div class="icon-box">
+                                <i class="bi bi-egg-fried" style="color: #ffbb2c;"></i>
+                                <h3><a href="">Restaurants</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                            <div class="icon-box">
+                                <i class="bi bi-scissors" style="color:darkred;"></i>
+                                <h3><a href="">Barbershops</a></h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section><!-- End Choice service Section -->
+
+        </div>
+    </div>
+</main>

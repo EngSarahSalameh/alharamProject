@@ -1,0 +1,88 @@
+﻿@model List<alharamApp.Models.facilitie>
+@using alharamApp.Models
+
+@{
+    ViewBag.Title = "showAllBarbershop";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+@{
+    bool isLoggedIn = true;
+    if (string.IsNullOrWhiteSpace(User.Identity.Name))
+    //the privous condition is method which terurn the name of the user currently loggedin
+    {
+        isLoggedIn = false;
+    }
+
+}
+<title>Your Guide to  Alharam | Barbershops</title>
+
+<main id="main" data-aos="fade-in">
+
+    <div class="breadcrumbs" style="background-color:white">
+        <div class="container">
+
+            <div id="courses" class="courses" style="text-align:left">
+
+                <div class="container">
+                    @using (Html.BeginForm("searchSomeBarbershop", "alharam", FormMethod.Post))
+                    {
+                        <input class="form-control" type="search" placeholder="Search Barbershop" aria-label="Search" style="max-width:32%" name="searchBarbershop">}
+
+                    <br />
+                    <br />
+                    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                <div class="course-item h-100">
+
+                                    <img src="~/@item.image" class="img-fluid" alt="One of makkah facilities" style="width:400px; height:250px">
+
+                                    <div class="course-content">
+
+                                        <div><small><a href=@item.location style="color:gray"><i class="bi bi-geo-fill" style="color:white"></i>@Html.DisplayFor(i => item.name) <i class="bi bi-geo-fill" style="color:#f44336"></i></a></small></div>
+
+
+                                        @if (!isLoggedIn)
+                                        {
+
+                                            <div class="trainer-profile d-flex align-items-center">
+                                                @using (Html.BeginForm("loginForm", "account", FormMethod.Post))
+                                                {
+
+                                                    <button type="submit" class="btn btn-default" id="btn"><i class="bi bi-suit-heart" style="color:gray;" id="icon"></i></button>
+
+                                                }
+                                            </div>
+
+                                        }
+
+                                        else
+
+                                        {
+
+                                            <div class="trainer-profile d-flex align-items-center">
+                                                @using (Html.BeginForm("fav", "account", new { ID = item.id }, FormMethod.Post))
+                                                {
+
+                       <button type="submit" class="btn btn-default" id="btn"><i class="bi bi-suit-heart" id="icon" onMouseOver="this.style.color='#f44336'" onMouseOut="this.style.color='gray'" style="color:gray"></i></button>
+
+                                                }
+                                            </div>
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+            </div><!-- End Courses Section -->
+
+
+        </div>
+    </div>
+</main><!-- End #main -->

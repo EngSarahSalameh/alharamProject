@@ -1,0 +1,78 @@
+﻿@model List<alharamApp.Models.allPlace>
+@using alharamApp.Models
+
+@{
+    ViewBag.Title = "allFavoriteItems";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+
+@{
+    List<allPlace> list = Model;
+}
+
+<title>Your Guide to  Alharam | Favorites</title>
+
+<main id="main" data-aos="fade-in">
+
+    <div class="breadcrumbs" style="background-color:white">
+        <div class="container">
+
+            <div id="courses" class="courses" style="text-align:left">
+
+                @if (Model.Count == 0)
+                {
+
+                    <h5 style="color:lightslategray; text-align:center">No Favorites</h5> }
+
+                else
+
+                {
+
+                    <h5 style="color:lightslategray; text-align:left">Favorites <i class="bi bi-bookmark-heart" style="color:#e1a333"></i></h5>
+
+                 
+
+                    <br />
+
+                    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+
+                        @for (var i = 0; i < list.Count(); i++)
+                        {
+
+                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                <div class="course-item h-100">
+
+                                    <img src="~/@list[i].image" class="img-fluid" alt="One of makkah facilities" style="width:400px; height:250px">
+
+                                    <div class="course-content">
+
+                                        <div><a href=@list[i].location style="color:gray"><i class="bi bi-geo-fill" style="color:white"></i>@list[i].name <i class="bi bi-geo-fill" style="color:#f44336"></i></a></div>
+
+
+
+                                        <div class="trainer-profile d-flex align-items-center">
+                                            @using (Html.BeginForm("disLike", "account", new { ID = list[i].ID }, FormMethod.Post))
+                                            {
+
+                                                <button type="submit" class="btn btn-default" id="btn"><i class="bi bi-trash3" id="icon" onMouseOver="this.style.color='#f44336'" onMouseOut="this.style.color='gray'" style="color:gray"></i></button>
+
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        }
+
+                    </div>
+                }
+            </div>
+        </div><!-- End Courses Section -->
+
+
+    </div>
+</main><!-- End #main -->

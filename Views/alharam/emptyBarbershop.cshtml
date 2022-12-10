@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "emptyBarbershop";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+<title>Your Guide to  Alharam | Barbershop</title>
+
+<main id="main" data-aos="fade-in">
+    <div class="breadcrumbs" style="background-color:white">
+        <div class="container">
+
+            <div id="courses" class="courses">
+                <div class="container">
+                    @using (Html.BeginForm("searchSomeBarbershop", "alharam", FormMethod.Post))
+                    {
+                        <input class="form-control" type="search" placeholder="Search Barbershop" aria-label="Search" style="max-width:32%" name="searchHotel">}
+
+                    <section id="courses" class="courses">
+                        <div class="container" data-aos="fade-up">
+
+                            <h5 style="color:lightslategray">No results were found matching your search</h5>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
