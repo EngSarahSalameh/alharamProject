@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="alharamDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="barbershop">
+          <Key>
+            <PropertyRef Name="barbershopID" />
+          </Key>
+          <Property Name="barbershopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="barbershopName" Type="nvarchar" MaxLength="60" />
+          <Property Name="barbershopLocation" Type="nvarchar" MaxLength="300" />
+          <Property Name="barbershopImg" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="hotelID" />
+          </Key>
+          <Property Name="hotelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hotelName" Type="nvarchar" MaxLength="60" />
+          <Property Name="hotelLocation" Type="nvarchar" MaxLength="300" />
+          <Property Name="hotelImg" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="restaurant">
+          <Key>
+            <PropertyRef Name="restaurantID" />
+          </Key>
+          <Property Name="restaurantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="restaurantName" Type="nvarchar" MaxLength="60" />
+          <Property Name="restaurantLocation" Type="nvarchar" MaxLength="300" />
+          <Property Name="restaurantImg" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="alharamDBModel1StoreContainer">
+          <EntitySet Name="barbershop" EntityType="Self.barbershop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hotel" EntityType="Self.hotel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="restaurant" EntityType="Self.restaurant" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="alharamDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="barbershop">
+          <Key>
+            <PropertyRef Name="barbershopID" />
+          </Key>
+          <Property Name="barbershopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="barbershopName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="barbershopLocation" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="barbershopImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="hotelID" />
+          </Key>
+          <Property Name="hotelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hotelName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="hotelLocation" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="hotelImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="restaurant">
+          <Key>
+            <PropertyRef Name="restaurantID" />
+          </Key>
+          <Property Name="restaurantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="restaurantName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="restaurantLocation" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="restaurantImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="alharamDBFacilities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="barbershops" EntityType="Self.barbershop" />
+          <EntitySet Name="hotels" EntityType="Self.hotel" />
+          <EntitySet Name="restaurants" EntityType="Self.restaurant" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="alharamDBModel1StoreContainer" CdmEntityContainer="alharamDBFacilities">
+          <EntitySetMapping Name="barbershops">
+            <EntityTypeMapping TypeName="alharamDBModel1.barbershop">
+              <MappingFragment StoreEntitySet="barbershop">
+                <ScalarProperty Name="barbershopID" ColumnName="barbershopID" />
+                <ScalarProperty Name="barbershopName" ColumnName="barbershopName" />
+                <ScalarProperty Name="barbershopLocation" ColumnName="barbershopLocation" />
+                <ScalarProperty Name="barbershopImg" ColumnName="barbershopImg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hotels">
+            <EntityTypeMapping TypeName="alharamDBModel1.hotel">
+              <MappingFragment StoreEntitySet="hotel">
+                <ScalarProperty Name="hotelID" ColumnName="hotelID" />
+                <ScalarProperty Name="hotelName" ColumnName="hotelName" />
+                <ScalarProperty Name="hotelLocation" ColumnName="hotelLocation" />
+                <ScalarProperty Name="hotelImg" ColumnName="hotelImg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="restaurants">
+            <EntityTypeMapping TypeName="alharamDBModel1.restaurant">
+              <MappingFragment StoreEntitySet="restaurant">
+                <ScalarProperty Name="restaurantID" ColumnName="restaurantID" />
+                <ScalarProperty Name="restaurantName" ColumnName="restaurantName" />
+                <ScalarProperty Name="restaurantLocation" ColumnName="restaurantLocation" />
+                <ScalarProperty Name="restaurantImg" ColumnName="restaurantImg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
